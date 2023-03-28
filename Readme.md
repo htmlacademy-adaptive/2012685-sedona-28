@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Роман Кильмухаметов](https://up.htmlacademy.ru/adaptive/28/user/2012685).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya)
 
 ---
 
