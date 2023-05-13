@@ -19,12 +19,20 @@
             <button class="header__burger" type="button">
               <img src="img/icon-menu.svg" alt="раскрывающееся меню.">
             </button>
-            <div class="header__menu">
-              <a class="header__link" href="index.html">Главная</a>
-              <a class="header__link" href="#">Фото и видео</a>
-              <a class="header__link" href="form.html">Форма отзыва</a>
-              <a class="header__link" href="https://htmlacademy.ru">HTML ACADEMY</a>
-            </div>
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="index.html">Главная</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Фото и видео</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="https://htmlacademy.ru">HTML ACADEMY</a>
+              </li>
+            </ul>
           </nav>
         </div>
       </header>
@@ -43,42 +51,66 @@
           <ul class="gallery__container gallery-list">
             <li class="gallery-list__item">
               <img class="gallery-list__item-image" src="img/gallery-unknown-spaces.jpg" width="" height="" alt="Вид на шоссe.">
-              <b class="gallery-list__item-description">Неродные просторы</b>
-              <span class="gallery-list__item-description">Автор фото: Борис</span>
-              <button class="gallery-list__item-button button-likes" type="button">
-                <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
-              </button>
-              <span class="gallery-list__item-counter">1350</span>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Неродные просторы</b>
+                  <span class="gallery-list__item-description">Автор фото: Борис</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button button-likes" type="button">
+                    <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
+                  </button>
+                  <span class="gallery-list__item-counter">1350</span>
+                </div>
+              </div>
             </li>
 
             <li class="gallery-list__item">
               <img class="gallery-list__item-image" src="img/gallery-local-vegetation.jpg" width="" height="" alt="Вид на шоссe.">
-              <b class="gallery-list__item-description">Местная растительность</b>
-              <span class="gallery-list__item-description">Автор фото: Сергей</span>
-              <button class="gallery-list__item-button button-likes" type="button">
-                <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
-              </button>
-              <span class="gallery-list__item-counter">143</span>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Местная растительность</b>
+                  <span class="gallery-list__item-description">Автор фото: Сергей</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button button-likes" type="button">
+                    <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
+                  </button>
+                  <span class="gallery-list__item-counter">143</span>
+                </div>
+              </div>
             </li>
 
             <li class="gallery-list__item">
               <img class="gallery-list__item-image" src="img/gallery-road-on-the-north.jpg" width="" height="" alt="Вид на шоссe.">
-              <b class="gallery-list__item-description">Дорога на север</b>
-              <span class="gallery-list__item-description">Автор фото: Петр</span>
-              <button class="gallery-list__item-button button-likes" type="button">
-                <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
-              </button>
-              <span class="gallery-list__item-counter">96</span>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Дорога на север</b>
+                  <span class="gallery-list__item-description">Автор фото: Петр</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button button-likes" type="button">
+                    <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
+                  </button>
+                  <span class="gallery-list__item-counter">96</span>
+                </div>
+              </div>
             </li>
 
             <li class="gallery-list__item">
               <img class="gallery-list__item-image" src="img/gallery-bridge-of-devil.jpg" width="" height="" alt="Вид на шоссe.">
-              <b class="gallery-list__item-description">Мост дьявола</b>
-              <span class="gallery-list__item-description">Автор фото: Антон</span>
-              <button class="gallery-list__item-button button-likes" type="button">
-                <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
-              </button>
-              <span class="gallery-list__item-counter">254</span>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Мост дьявола</b>
+                  <span class="gallery-list__item-description">Автор фото: Антон</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button button-likes" type="button">
+                    <img src="img/icon-like.svg" width="" height="" alt="палец вверх.">
+                  </button>
+                  <span class="gallery-list__item-counter">254</span>
+                </div>
+              </div>
             </li>
           </ul>
           <div class="gallery__record">
@@ -91,9 +123,6 @@
 
       <footer class="footer">
         <div class="footer__container">
-          <div class="footer__map">
-            <img src="img/map-mobile.jpg" width="320" height="350" alt="Карта.">
-          </div>
           <div class="footer__contact">
             <span class="footer__hashtag">#visitsedona</span>
             <ul class="footer__social-list">

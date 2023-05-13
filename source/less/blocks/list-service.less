@@ -1,6 +1,9 @@
 .list-service {
   padding: 23px 18px 46px;
   list-style-type: none;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .list-service__item {
@@ -22,8 +25,33 @@
     background-repeat: no-repeat;
     background-size: auto auto;
   }
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    background-position: 90px 50px;
+    background-size: 77px 72px;
+    width: 256px;
+    padding: 158px 33px 60px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 160px 50px;
+    background-size: 77px 72px;
+    width: 400px;
+    min-height: 330px;
+    padding: 158px 33px 60px;
+  }
 }
 
-.list-service__title {}
+.list-service__title {
+  margin: 0;
+  margin-bottom: 23px;
+  @media (min-width: @tablet-width) {
+  .title-bigger(bigger; 18px);
+  }
+}
 
-.list-service__description {}
+.list-service__description {
+  margin: 0;
+}

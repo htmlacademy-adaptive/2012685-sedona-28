@@ -19,12 +19,20 @@
             <button class="header__burger" type="button">
               <img src="img/icon-menu.svg" alt="раскрывающееся меню.">
             </button>
-            <div class="header__menu">
-              <a class="header__link" href="index.html">Главная</a>
-              <a class="header__link" href="catalog.html">Фото и видео</a>
-              <a class="header__link" href="#">Форма отзыва</a>
-              <a class="header__link" href="https://htmlacademy.ru">HTML ACADEMY</a>
-            </div>
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="index.html">Главная</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="catalog.html">Фото и видео</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Форма отзыва</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="https://htmlacademy.ru">HTML ACADEMY</a>
+              </li>
+            </ul>
           </nav>
         </div>
       </header>
@@ -74,35 +82,35 @@
 
             <fieldset class="review-form__fieldset fieldset-review">
               <legend class="fieldset-review__legend">Ваше общее впечатление:</legend>
-              <label class="fieldset-review__label label-form">
+              <label class="fieldset-review__label--flex label-form">
                 <input class="label-form__radio" type="radio" value="Скорее положительное" name="impression" checked>
                 <span class="label-form__title">Скорее положительное</span>
               </label>
-              <label class="fieldset-review__label label-form">
+              <label class="fieldset-review__label--flex label-form">
                 <input class="label-form__radio" type="radio" value="Скорее отрицательное" name="impression">
                 <span class="label-form__title">Скорее отрицательное</span>
               </label>
-              <label class="fieldset-review__label label-form">
+              <label class="fieldset-review__label--flex label-form">
                 <input class="label-form__radio" type="radio" value="Затрудняюсь ответить" name="impression">
                 <span class="label-form__title">Затрудняюсь ответить</span>
               </label>
             </fieldset>
 
             <fieldset class="review-form__fieldset fieldset-review">
-              <legend class="fieldset-review__legend">Посещенные достопримечательности:</legend>
-              <label class="fieldset-review__label label-form">
+              <legend class="fieldset-review__legend">Посещенные <br> достопримечательности:</legend>
+              <label class="fieldset-review__label--flex label-form">
                 <input class="label-form__mark" type="checkbox" value="Мост Дьявола" name="visited attractions" checked>
                 <span class="label-form__title">Мост Дьявола</span>
               </label>
-              <label class="fieldset-review__label label-form">
+              <label class="fieldset-review__label--flex label-form">
                 <input class="label-form__mark" type="checkbox" value="Гора-Колокол" name="visited attractions" checked>
                 <span class="label-form__title">Гора-Колокол</span>
               </label>
-              <label class="fieldset-review__label label-form">
+              <label class="fieldset-review__label--flex label-form">
                 <input class="label-form__mark" type="checkbox" value="Слайд-парк" name="visited attractions" checked>
                 <span class="label-form__title">Слайд-парк</span>
               </label>
-              <label class="fieldset-review__label label-form">
+              <label class="fieldset-review__label--flex label-form">
                 <input class="label-form__mark" type="checkbox" value="Красные скалы" name="visited attractions">
                 <span class="label-form__title">Красные скалы</span>
               </label>
@@ -125,9 +133,6 @@
 
       <footer class="footer">
         <div class="footer__container">
-          <div class="footer__map">
-            <img src="img/map-mobile.jpg" width="320" height="350" alt="Карта.">
-          </div>
           <div class="footer__contact">
             <span class="footer__hashtag">#visitsedona</span>
             <ul class="footer__social-list">

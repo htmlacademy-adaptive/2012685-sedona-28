@@ -4,8 +4,59 @@
 
 .review-form__fieldset {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin: 24px 0 39px;
+  margin: 50px auto 0;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    &:nth-child(n+3) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: flex-start;
+      width: 575px;
+    }
+    &:nth-child(1) {
+      margin: 0;
+      margin-left: auto;
+      margin-right: 28px;
+    }
+    &:nth-child(2) {
+      margin: 0;
+      margin-right: auto;
+      margin-left: 28px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-child(n+3) {
+      width: 960px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
 }
 
-.review-form__button-container {}
+.review-form__button-container {
+  width: 280px;
+  text-align: right;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 648px;
+    display: flex;
+    margin: 48px auto 64px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+}

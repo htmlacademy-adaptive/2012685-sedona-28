@@ -1,17 +1,28 @@
 .advantages {
+  margin: 0 auto;
 }
 
 .advantages__header {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 320px;
   padding: 32px 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 47px 124px 55px;
+  }
 }
 
 .advantages__title {
   .title;
   text-align: center;
   margin: 0;
-  margin-bottom: 11px;
   &--color {
     color: @white;
+  }
+  @media (min-width: @tablet-width) {
+    .title-bigger(bigger; 18px);
   }
 }
 
@@ -19,22 +30,59 @@
   text-align: center;
   display: block;
   margin: 0;
-  margin-top: 17px;
+  margin-top: 15px;
   &--color {
     color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 25px;
   }
 }
 
 .advantages__list {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    flex-direction: row;
+  }
 }
 
-.advantages__item {}
+.advantages__item {
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
 
 .advantages__container {
   padding: 33px 18px 40px;
+  width: 320px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    min-height: 256px;
+    width: 256px;
+    padding: 52px 33px 31px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    padding: 52px 57px 51px;
+  }
 
   &--blue {
     background-color: @blue;
@@ -45,6 +93,27 @@
   }
 }
 
-.advantages__image {}
+.advantages__image {
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    display: flex;
+    min-height: 256px;
+  }
+}
 
-.advantages__list-service {}
+.advantages__list-service {
+  width: 280px;
+  margin: 0;
+  padding: 0 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

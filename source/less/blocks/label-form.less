@@ -1,16 +1,27 @@
 .label-form {
 }
 
-.label-form__description {}
+.label-form__description {
+  margin-left: 16px;
+}
 
 .label-form__input {
   .title;
+  margin-bottom: 16px;
   text-transform: none;
   display: block;
   background-color: @input;
   border: none;
-  min-width: auto;
   padding: 16px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    min-width: 295px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 430px;
+  }
 }
 
 .label-form__icon {}
@@ -35,6 +46,15 @@
   padding: 0;
   background-color: @input;
   border: none;
-  min-width: 280px;
+  width: 280px;
   min-height: 150px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    min-height: 160px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
 }
