@@ -1,5 +1,13 @@
 .label-form {
+  text-align: left;
 }
+
+.label-form__container {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
 
 .label-form__description {
   margin-left: 16px;
@@ -43,18 +51,18 @@
 }
 
 .label-form__text {
-  padding: 0;
+  .title;
+  text-transform: none;
+  box-sizing: border-box;
+  padding: 16px;
   background-color: @input;
   border: none;
-  width: 280px;
   min-height: 150px;
+  width: 100%;
+  resize: none;
 
   @media (min-width: @tablet-width) {
-    width: 648px;
+    width: 100%;
     min-height: 160px;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
   }
 }

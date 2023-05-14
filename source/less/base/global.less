@@ -23,7 +23,19 @@ body {
 }
 
 .wrapper {
-  overflow: hidden;
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+
   // Sticky footer
   display: flex;
   flex-direction: column;

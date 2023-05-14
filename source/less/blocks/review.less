@@ -1,18 +1,27 @@
 .review {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .review__header {
   margin: 0 auto;
-  padding: 36px 20px 28px;
-  width: 280px;
+  padding: 36px 0 28px;
 
   @media (min-width: @tablet-width) {
-    width: 436px;
-    padding: 36px 160px 28px;
+    padding: 36px 106px 28px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 36px 382px 28px;
+    padding: 36px 262px 28px;
   }
 }
 
@@ -26,15 +35,4 @@
   text-align: center;
   margin: 0;
   margin-top: 24px;
-}
-
-.review__form {
-  @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: @desktop-width) {
-
-  }
 }
