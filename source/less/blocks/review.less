@@ -1,8 +1,28 @@
 .review {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .review__header {
-  padding: 36px 20px 28px;
+  margin: 0 auto;
+  padding: 36px 0 28px;
+
+  @media (min-width: @tablet-width) {
+    padding: 36px 106px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 262px 28px;
+  }
 }
 
 .review__title {
@@ -16,5 +36,3 @@
   margin: 0;
   margin-top: 24px;
 }
-
-.review__form {}

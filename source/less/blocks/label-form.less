@@ -1,16 +1,35 @@
 .label-form {
+  text-align: left;
 }
 
-.label-form__description {}
+.label-form__container {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+
+.label-form__description {
+  margin-left: 16px;
+}
 
 .label-form__input {
   .title;
+  margin-bottom: 16px;
   text-transform: none;
   display: block;
   background-color: @input;
   border: none;
-  min-width: auto;
   padding: 16px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    min-width: 295px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 430px;
+  }
 }
 
 .label-form__icon {}
@@ -32,9 +51,18 @@
 }
 
 .label-form__text {
-  padding: 0;
+  .title;
+  text-transform: none;
+  box-sizing: border-box;
+  padding: 16px;
   background-color: @input;
   border: none;
-  min-width: 280px;
   min-height: 150px;
+  width: 100%;
+  resize: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    min-height: 160px;
+  }
 }
