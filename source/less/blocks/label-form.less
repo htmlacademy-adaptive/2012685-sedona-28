@@ -1,5 +1,23 @@
 .label-form {
-  text-align: left;
+
+  &:hover {
+    .label-form__radio,
+    .label-form__mark {
+      background-color: rgba(229, 229, 229, 1);
+    }
+  }
+
+  &:active {
+    .label-form__radio,
+    .label-form__mark {
+      background-color: rgba(213, 213, 213, 1);
+    }
+
+    .label-form__radio::after,
+    .label-form__mark::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 .label-form__container {
@@ -8,13 +26,15 @@
   margin-top: 16px;
 }
 
-
 .label-form__description {
+  display: block;
   margin-left: 16px;
+  text-align: left;
 }
 
 .label-form__input {
   .title;
+  width: 100%;
   margin-bottom: 16px;
   text-transform: none;
   display: block;
@@ -23,8 +43,27 @@
   padding: 16px;
   box-sizing: border-box;
 
+  &:hover {
+    background-color: rgba(229, 229, 229, 1);
+  }
+
+  &:focus {
+    background-color: @white;
+    outline: solid 4px rgba(229, 229, 229, 1);
+  }
+
+  &:not(:disabled):focus-visible + .label-form__radio {
+    outline: #83B3D3 solid 3px;
+  }
+
+  &:not(:disabled):focus-visible + .label-form__mark {
+    outline: #83B3D3 solid 3px;
+  }
+
   @media (min-width: @tablet-width) {
     min-width: 295px;
+    margin: 0;
+    margin-bottom: 16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,22 +71,53 @@
   }
 }
 
-.label-form__icon {}
+.label-form__input[type="radio"]:checked + .label-form__radio::after {
+  display: block;
+  position: relative;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: @black;
+  border-radius: 50%;
+  left: 15px;
+  top: 15px;
+}
 
 .label-form__radio {
+  position: relative;
   width: 46px;
   height: 46px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 1);
+  left: 0;
+  top: 2px;
 }
 
 .label-form__title {
   .title;
   text-transform: none;
+  margin-left: 16px;
+}
+
+.label-form__input[type="checkbox"]:checked + .label-form__mark::after {
+  display: block;
+  position: relative;
+  content: url("../img/tick.svg");
+  width: 16px;
+  height: 16px;
+  left: 15px;
+  top: 15px;
 }
 
 .label-form__mark {
-  border: none;
+  position: relative;
+  border-radius: 4px;
   width: 46px;
   height: 46px;
+  background-color: rgba(242, 242, 242, 1);
+  left: 0;
+  top: 2px;
 }
 
 .label-form__text {
@@ -62,7 +132,11 @@
   resize: none;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: 648px;
     min-height: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
   }
 }

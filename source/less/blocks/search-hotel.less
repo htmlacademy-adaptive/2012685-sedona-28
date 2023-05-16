@@ -16,7 +16,8 @@
 .search-hotel__title {
   margin: 0;
   margin-bottom: 25px;
-  .title-bigger(bigger; 18px);
+  .title;
+  font-size: 30px;
 }
 
 .search-hotel__description {
@@ -36,4 +37,20 @@
   color: @white;
   padding: 16px 20px;
   margin: 0 auto;
+
+  &:hover {
+    background-color: rgba(102, 158, 192, 1);
+  }
+
+  &:active {
+    background-color: rgba(84, 150, 189, 1);
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: rgba(229, 229, 229, 1);
+    color: @white;
+  }
 }
