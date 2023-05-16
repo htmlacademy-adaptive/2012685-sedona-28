@@ -34,7 +34,7 @@
 
 .label-form__input {
   .title;
-  width: 100%;
+  margin: 0;
   margin-bottom: 16px;
   text-transform: none;
   display: block;
@@ -60,14 +60,17 @@
     outline: #83B3D3 solid 3px;
   }
 
-  @media (min-width: @tablet-width) {
-    min-width: 295px;
-    margin: 0;
-    margin-bottom: 16px;
-  }
+  &--width {
+    width: 100%;
 
-  @media (min-width: @desktop-width) {
-    min-width: 430px;
+    @media (min-width: @tablet-width) {
+      min-width: 295px;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 430px;
+    }
   }
 }
 

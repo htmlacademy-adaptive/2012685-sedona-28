@@ -20,6 +20,7 @@
   margin: auto 5px;
   margin-left: auto;
 
+  // Иконка кнопки бургера
   &--closed .header__burger::before {
     content: "";
     position: absolute;
@@ -45,11 +46,13 @@
       0 16px 0 0 fade(@blue, 30%);
   }
 
+  //Модификатор открывающий меню
   &--opened .header__burger {
     top: 0;
     right: auto;
     left: 0;
 
+    //Иконка кнопки закрытия (крестик) бургерного меню
     &::before,
     &::after {
       content: "";
@@ -64,7 +67,6 @@
 
     &::before {
       transform: rotate(45deg);
-      box-shadow: none;
     }
 
     &::after {
@@ -83,26 +85,29 @@
   }
 }
 
+//Модификатор закрывающий бургерное меню
 @media (max-width: @tablet-width - 1px) {
   .header__nav--closed .header__item {
-    display: none;
+    display: none; // скрытие элементов li списка меню
   }
 
   .header__nav--nojs .header__burger {
-    display: none;
+    display: none; // скрытие кнопки бургера и кнопки закрытия списка меню
   }
 
-  .header__nav--opened .header__list::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    z-index: 4;
-    width: 320px;
-    height: 7px;
-    box-shadow: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-  }
+  // декоративная тень в конце списка меню
+  // .header__nav--opened .header__list::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   z-index: 4;
+  //   width: 320px;
+  //   height: 7px;
+  //   box-shadow: (180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  // }
 }
 
+//Активацию бургерного меню в случае отключения JS
 .header__nav--nojs {
   .header__burger {
     display: none;
@@ -113,6 +118,7 @@
   }
 }
 
+//Положение кнопки бургера
 .header__burger {
   background-color: transparent;
   border: none;
