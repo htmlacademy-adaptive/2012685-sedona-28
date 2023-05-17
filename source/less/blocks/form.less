@@ -1,8 +1,8 @@
 .form {
-
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
@@ -18,22 +18,16 @@
   @media (min-width: @tablet-width) {
     width: auto;
     &:nth-child(n+3) {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: flex-start;
+      flex-direction: row;
       width: 100%;
+      justify-content: center;
     }
     &:nth-child(1) {
       margin: 0;
-      margin-left: auto;
       margin-right: 28px;
     }
     &:nth-child(2) {
       margin: 0;
-      margin-right: auto;
-      margin-left: 28px;
     }
   }
 
@@ -48,19 +42,37 @@
 }
 
 .form__fieldset-legend {
-  .title;
+  .title-bigger(bigger; 18px);
   text-align: center;
   margin-bottom: 28px;
 }
 
+.form__fieldset-container {
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    width: 224px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: contents;
+  }
+
+  &--radio {
+    width: 280px;
+    padding-right: 16px;
+
+    @media (min-width: @desktop-width) {
+      display: contents;
+    }
+  }
+}
+
 .form__button-container {
   text-align: right;
-  margin: 0 auto;
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
     display: flex;
     margin: 48px auto 64px;
     justify-content: space-between;

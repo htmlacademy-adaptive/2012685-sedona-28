@@ -7,6 +7,15 @@
 }
 
 .footer__map {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 350px;
+  padding: 0;
+  background-image: url("../img/map.jpg");
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 .footer__contact {
@@ -49,21 +58,22 @@
   min-height: 48px;
   align-items: center;
   margin: 3px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(102, 158, 192, 1);
+  }
+
+  &:active {
+    background-color: rgba(84, 150, 189, 1);
+
+    .footer__icon {
+      opacity: 0.3;
+    }
+  }
 }
 
-.footer__icon-vkontakte {
-  display: flex;
-  margin: auto;
-  align-items: center;
-}
-
-.footer__icon-telegram {
-  display: flex;
-  margin: auto;
-  align-items: center;
-}
-
-.footer__icon-youtube {
+.footer__link {
   display: flex;
   margin: auto;
   align-items: center;
@@ -84,6 +94,15 @@
 .footer__copyright-text {
   text-align: center;
 
+  &:hover {
+    cursor: pointer;
+    color: @blue;
+  }
+
+  &:active {
+    color:  rgba(179, 179, 179, 1);
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 12px;
   }
@@ -93,4 +112,16 @@
   display: inline-block;
   height: 34px;
   width: 27px;
+
+  &:hover {
+    .footer__logo-academy {
+      fill: @blue;
+    }
+  }
+
+  &:active {
+    .footer__logo-academy {
+      fill: rgba(179, 179, 179, 1);
+    }
+  }
 }
