@@ -5,6 +5,10 @@
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!--32x32-->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body>
@@ -35,8 +39,11 @@
 
       <main>
         <h1 class="visually-hidden">Отзыв.</h1>
-        <div class="hero">
-          <img src="img/hero-sedona.svg" alt="Седона." width="229" height="39">
+        <div class="hero hero--form">
+          <picture>
+            <source media="(min-width:768px)" srcset="img/hero-form-desktop.svg" width="457" height="77">
+            <img src="img/hero-form-mobile.svg" width="229" height="39" alt="Седона.">
+          </picture>
         </div>
 
         <section class="review">
