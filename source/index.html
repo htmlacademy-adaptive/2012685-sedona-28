@@ -5,6 +5,10 @@
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!--32x32-->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body>
@@ -36,7 +40,10 @@
       <main>
         <h1 class="visually-hidden">Добро пожаловать в Седону.</h1>
         <div class="hero">
-          <img src="img/hero-welcome.svg" alt="Добро пожаловать в великолепную Седону, потому что великий каньон отстой!" width="282" height="214">
+          <picture>
+            <source media="(min-width:768px)" srcset="img/hero-welcome-desktop.svg" width="461" height="350">
+            <img src="img/hero-welcome.svg " width="282" height="214" alt="Добро пожаловать в великолепную Седону, потому что великий каньон отстой!">
+          </picture>
         </div>
 
         <section class="advantages">
@@ -53,7 +60,11 @@
                 <span class="advantages__description advantages__description--color">№1</span>
                 <p class="advantages__description advantages__description--color">Седона не аттракцион для туристов, там течет своя жизнь </p>
               </div>
-              <img class="advantages__image" src="img/advantages-house.jpg" width="320" height="260" alt="Вид на город Седона.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-city-desktop.png 1x, img/photo-city-desktop@2x.png 2x" width="800" height="256">
+                <source media="(min-width: 768px)" srcset="img/photo-city-tablet.png 1x, img/photo-city-tablet@2x.png 2x" width="512" height="256">
+                <img class="advantages__image" src="img/photo-city-mobile.png 1x" srcset="img/photo-city-mobile@2x.png 2x" width="320" height="260" alt="Вид на город Седона.">
+              </picture>
             </li>
 
             <li class="advantages__item advantages__item--full">
@@ -79,7 +90,11 @@
                 <span class="advantages__description advantages__description--color">№2</span>
                 <p class="advantages__description advantages__description--color">Да, по нему можно пройтись! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="advantages__image" src="img/advantages-cliff.jpg" width="320" height="260" alt="Вид на ущелье.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop.png 1x, img/photo-bridge-desktop@2x.png 2x" width="800" height="256">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.png 1x, img/photo-bridge-tablet@2x.png 2x" width="512" height="256">
+                <img class="advantages__image" src="img/photo-bridge-mobile.png 1x" srcset="img/photo-bridge-mobile@2x.png 2x" width="320" height="260" alt="Вид на ущелье.">
+              </picture>
             </li>
 
             <li class="advantages__item">

@@ -1,10 +1,57 @@
 .hero {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
   width: 100%;
   padding: 90px 0 85px;
   background-color: @black;
-  background-image: url("../img/hero-background.jpg"), url("../img/hero-welcome-bottom.svg");
-  background-position: 50% 30%, 0 100%;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url("../img/back-mobile.jpg"), url("../img/hero-welcome-bottom.svg");
+  background-size: cover, contain;
+  background-position: 50% 30%, center;
+  background-repeat: no-repeat no-repeat;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg"), url("../img/hero-welcome-bottom.svg");
+    background-size: cover, contain;
+    background-position: 50% 30%, center;
+    background-repeat: no-repeat no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/back-desktop.png"), url("../img/hero-welcome-bottom.svg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.png"), url("../img/hero-welcome-bottom.svg");
+    }
+  }
+
+  &--form {
+    background-image: url("../img/back-form-mobile.png"), url("../img/hero-welcome-bottom.svg");
+    background-position: 50% 100%, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-form-mobile@2x.png"), url("../img/hero-welcome-bottom.svg");
+    }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/back-form-tablet.png");
+      min-height: 290px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-form-tablet@2x.png"), url("../img/hero-welcome-bottom.svg");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/back-form-desktop.png");
+      min-height: 300px;
+      background-position: 50% 100%, center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-form-desktop@2x.png"), url("../img/hero-welcome-bottom.svg");
+      }
+    }
+  }
 }

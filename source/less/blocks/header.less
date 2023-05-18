@@ -107,7 +107,7 @@
   // }
 }
 
-//Активацию бургерного меню в случае отключения JS
+//Активация бургерного меню в случае отключения JS
 .header__nav--nojs {
   .header__burger {
     display: none;
@@ -175,16 +175,14 @@
   @media (min-width: @tablet-width) {
     display: inline-block;
     width: 153px;
-    &:nth-child(2) {
-      margin-right: 153px;
+
+    &:nth-child(4n+3) {
+      margin-left: 20%;
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 240px;
-    &:nth-child(2) {
-      margin-right: 240px;
-    }
   }
 }
 

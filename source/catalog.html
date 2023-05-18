@@ -5,6 +5,10 @@
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!--32x32-->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body>
@@ -35,8 +39,11 @@
 
       <main>
         <h1 class="visually-hidden">Отзыв.</h1>
-        <div class="hero">
-          <img src="img/hero-sedona.svg" alt="Седона." width="229" height="39">
+        <div class="hero hero--form">
+          <picture>
+            <source media="(min-width:768px)" srcset="img/hero-form-desktop.svg" width="457" height="77">
+            <img src="img/hero-form-mobile.svg" width="229" height="39" alt="Седона.">
+          </picture>
         </div>
 
         <section class="gallery">
@@ -46,7 +53,11 @@
           </header>
           <ul class="gallery__container gallery-list">
             <li class="gallery-list__item">
-              <img class="gallery-list__item-image" src="img/gallery-unknown-spaces.jpg" width="" height="" alt="Вид на шоссe.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-road-desktop.png 1x, img/photo-road-desktop@2x.png 2x" width="1200" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-road-tablet.png 1x, img/photo-road-tablet@2x.png 2x" width="648" height="400">
+                <img class="advantages__image" src="img/photo-road-mobile.png 1x" srcset="img/photo-road-mobile@2x.png 2x" width="280" height="280" alt="Вид на шоссе.">
+              </picture>
               <div class="gallery-list__item-container">
                 <div class="gallery-list__item-container-description">
                   <b class="gallery-list__item-description">Неродные просторы</b>
@@ -62,7 +73,11 @@
             </li>
 
             <li class="gallery-list__item">
-              <img class="gallery-list__item-image" src="img/gallery-local-vegetation.jpg" width="" height="" alt="Вид на шоссe.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-plant-desktop.png 1x, img/photo-plant-desktop@2x.png 2x" width="400" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-plant-tablet.png 1x, img/photo-plant-tablet@2x.png 2x" width="324" height="267">
+                <img class="advantages__image" src="img/photo-plant-mobile.png 1x" srcset="img/photo-plant-mobile@2x.png 2x" width="280" height="280" alt="Местная растительность.">
+              </picture>
               <div class="gallery-list__item-container">
                 <div class="gallery-list__item-container-description">
                   <b class="gallery-list__item-description">Местная растительность</b>
@@ -78,7 +93,11 @@
             </li>
 
             <li class="gallery-list__item">
-              <img class="gallery-list__item-image" src="img/gallery-road-on-the-north.jpg" width="" height="" alt="Вид на шоссe.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-forest-desktop.png 1x, img/photo-forest-desktop@2x.png 2x" width="400" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-forest-tablet.png 1x, img/photo-forest-tablet@2x.png 2x" width="324" height="267">
+                <img class="advantages__image" src="img/photo-forest-mobile.png 1x" srcset="img/photo-forest-mobile@2x.png 2x" width="280" height="280" alt="Лес.">
+              </picture>
               <div class="gallery-list__item-container">
                 <div class="gallery-list__item-container-description">
                   <b class="gallery-list__item-description">Дорога на север</b>
@@ -94,7 +113,11 @@
             </li>
 
             <li class="gallery-list__item">
-              <img class="gallery-list__item-image" src="img/gallery-bridge-of-devil.jpg" width="" height="" alt="Вид на шоссe.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-clif-desktop.png 1x, img/photo-clif-desktop@2x.png 2x" width="400" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-clif-tablet.png 1x, img/photo-clif-tablet@2x.png 2x" width="324" height="267">
+                <img class="advantages__image" src="img/photo-clif-mobile.png 1x" srcset="img/photo-clif-mobile@2x.png 2x" width="280" height="280" alt="Ущелье.">
+              </picture>
               <div class="gallery-list__item-container">
                 <div class="gallery-list__item-container-description">
                   <b class="gallery-list__item-description">Мост дьявола</b>
