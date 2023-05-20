@@ -1,13 +1,61 @@
 .modal-error {
-  display: none;
-  padding: 45px 40px 35px;
+  position: relative;
+  background-color: @white;
+  margin: auto;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 45px 41px 35px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    padding: 50px 40px 50px;
+  }
 }
 
 .modal-error__title {
   .title;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    width: 150px;
+  }
 }
 
 .modal-error__description {
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 40px 0;
+  }
+}
+
+.modal-error__button {
+  .title;
+  width: 180px;
+  height: 58px;
+  color: @white;
+  box-sizing: border-box;
+  border: none;
+  background-color: @blue;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+  }
+
+  &:hover {
+    background-color: rgba(102, 158, 192, 1);
+  }
+
+  &:active {
+    background-color: rgba(84, 150, 189, 1);
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: rgba(229, 229, 229, 1);
+    color: @white;
+  }
 }

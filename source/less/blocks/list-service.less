@@ -7,37 +7,40 @@
 }
 
 .list-service__item {
-  padding-left: 65px;
+  margin-bottom: 25px;
+  text-align: left;
+  padding-left: 50px;
+
   &--house {
-    background-image: url("../img/icon-house.svg");
+    background-image: url("../img/sprite.svg#icon-house");
     background-repeat: no-repeat;
-    background-size: auto auto;
+    background-size: 40px 40px;
   }
 
   &--food {
-    background-image: url("../img/icon-burger.svg");
+    background-image: url("../img/sprite.svg#icon-food");
     background-repeat: no-repeat;
-    background-size: auto auto;
+    background-size: 40px 40px;
   }
 
   &--souvenir {
-    background-image: url("../img/icon-gift.svg");
+    background-image: url("../img/sprite.svg#icon-gift");
     background-repeat: no-repeat;
-    background-size: auto auto;
+    background-size: 40px 40px;
   }
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     text-align: center;
     background-position: 90px 50px;
     background-size: 77px 72px;
     width: 256px;
-    padding: 158px 33px 60px;
+    padding: 158px 40px 60px;
     box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
     background-position: 160px 50px;
-    background-size: 77px 72px;
     width: 400px;
     min-height: 330px;
     padding: 158px 33px 60px;
@@ -45,10 +48,12 @@
 }
 
 .list-service__title {
+  .title;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
-  .title-bigger(bigger; 18px);
+    .title-bigger(bigger; 18px);
   }
 }
 
