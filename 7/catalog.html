@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/favicons/favicon.ico"> <!--32x32-->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <base href="https://htmlacademy-adaptive.github.io/2012685-sedona-28/7/">
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a class="header__logo" href="index.html">
+          <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип Cедоны.">
+        </a>
+
+        <nav class="header__nav header__nav--closed header__nav--nojs">
+          <button class="header__burger" type="button"></button>
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="index.html">Главная</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link header__link--current" href="#">Фото и видео</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="https://htmlacademy.ru">HTML ACADEMY</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <h1 class="visually-hidden">Отзыв.</h1>
+        <div class="hero hero--form">
+          <picture>
+            <source media="(min-width:768px)" srcset="img/hero-form-desktop.svg" width="457" height="77">
+            <img src="img/hero-form-mobile.svg" width="229" height="39" alt="Седона.">
+          </picture>
+        </div>
+
+        <section class="gallery">
+          <header class="gallery__header">
+            <h2 class="gallery__title">Фото и видео</h2>
+            <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          </header>
+          <ul class="gallery__container gallery-list">
+            <li class="gallery-list__item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-road-desktop.jpg 1x, img/photo-road-desktop@2x.jpg 2x" width="1200" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-road-tablet.jpg 1x, img/photo-road-tablet@2x.jpg 2x" width="648" height="400">
+                <img class="advantages__image" src="img/photo-road-mobile.jpg 1x" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="280" alt="Вид на шоссе.">
+              </picture>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Неродные просторы</b>
+                  <span class="gallery-list__item-description">Автор фото: Борис</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                  </button>
+                  <span class="gallery-list__item-counter">1350</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="gallery-list__item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-plant-desktop.jpg 1x, img/photo-plant-desktop@2x.jpg 2x" width="400" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-plant-tablet.jpg 1x, img/photo-plant-tablet@2x.jpg 2x" width="324" height="267">
+                <img class="advantages__image" src="img/photo-plant-mobile.jpg 1x" srcset="img/photo-plant-mobile@2x.jpg 2x" width="280" height="280" alt="Местная растительность.">
+              </picture>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Местная растительность</b>
+                  <span class="gallery-list__item-description">Автор фото: Сергей</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                  </button>
+                  <span class="gallery-list__item-counter">143</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="gallery-list__item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-forest-desktop.jpg 1x, img/photo-forest-desktop@2x.jpg 2x" width="400" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-forest-tablet.jpg 1x, img/photo-forest-tablet@2x.jpg 2x" width="324" height="267">
+                <img class="advantages__image" src="img/photo-forest-mobile.jpg 1x" srcset="img/photo-forest-mobile@2x.jpg 2x" width="280" height="280" alt="Лес.">
+              </picture>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Дорога на север</b>
+                  <span class="gallery-list__item-description">Автор фото: Петр</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                  </button>
+                  <span class="gallery-list__item-counter">96</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="gallery-list__item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-clif-desktop.jpg 1x, img/photo-clif-desktop@2x.jpg 2x" width="400" height="400">
+                <source media="(min-width: 768px)" srcset="img/photo-clif-tablet.jpg 1x, img/photo-clif-tablet@2x.jpg 2x" width="324" height="267">
+                <img class="advantages__image" src="img/photo-clif-mobile.jpg 1x" srcset="img/photo-clif-mobile@2x.jpg 2x" width="280" height="280" alt="Ущелье.">
+              </picture>
+              <div class="gallery-list__item-container">
+                <div class="gallery-list__item-container-description">
+                  <b class="gallery-list__item-description">Мост дьявола</b>
+                  <span class="gallery-list__item-description">Автор фото: Антон</span>
+                </div>
+                <div class="gallery-list__item-container-button">
+                  <button class="gallery-list__item-button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                  </button>
+                  <span class="gallery-list__item-counter">254</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="gallery__record">
+            <h2 class="gallery__record-title">Все еще сомневаетесь?</h2>
+            <p class="gallery__record-description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <div class="gallery__record-container">
+              <button class="gallery__button" type="button"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__contact">
+          <span class="footer__hashtag">#visitsedona</span>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <span class="visually-hidden">ссылка на Вконтакте.</span>
+              <a class="footer__link" href="https://vk.com/htmlacademy"></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__link" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">ссылка на Телеграм.</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__link" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">ссылка на Ютуб.</span>
+              </a>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            <span class="footer__copyright-text">Разработано</span>
+            <a class="footer__copyright-link" href="#">
+              <span class="visually-hidden">Лотип академии.</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
