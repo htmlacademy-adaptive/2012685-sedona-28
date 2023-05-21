@@ -7,7 +7,9 @@
 }
 
 .footer__map {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   width: 100%;
   min-height: 350px;
@@ -15,7 +17,6 @@
   background-image: url("../img/map.jpg");
   background-position: 50% 30%;
   background-repeat: no-repeat;
-  text-align: center;
 }
 
 .footer__contact {
@@ -28,25 +29,23 @@
     justify-content: space-between;
     padding: 36px 60px;
   }
-
 }
 
 .footer__hashtag {
   .title-bigger(bigger; 18px);
-  text-decoration: solid;
 }
 
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 auto;
   margin-top: 30px;
   padding: 0;
   text-align: center;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
@@ -67,61 +66,78 @@
   &:active {
     background-color: rgba(84, 150, 189, 1);
 
-    .footer__icon {
+    &::after {
       opacity: 0.3;
     }
   }
-}
 
-.footer__link {
-  display: flex;
-  margin: auto;
-  align-items: center;
+  &::after {
+    display: flex;
+    background-color: @white;
+    justify-content: center;
+  }
+
+  &:nth-child(1) {
+    &::after {
+      content: "";
+      mask-image: url("../img/sprite.svg#icon-vcontakte");
+      width: 24px;
+      height: 14px;
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      content: "";
+      mask-image: url("../img/sprite.svg#icon-telegram");
+      width: 22px;
+      height: 18px;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      content: "";
+      mask-image: url("../img/sprite.svg#icon-youtube");
+      width: 20px;
+      height: 14px;
+    }
+  }
 }
 
 .footer__copyright {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0 auto;
   margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
   }
-}
 
-.footer__copyright-text {
-  text-align: center;
+  &::after {
+    content: "";
+    mask-image: url("../img/sprite.svg#logo-academy");
+    background-color: @black;
+    width: 27px;
+    height: 36px;
+    margin-left: 12px;
+  }
 
   &:hover {
     cursor: pointer;
     color: @blue;
-  }
 
-  &:active {
-    color:  rgba(179, 179, 179, 1);
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-right: 12px;
-  }
-}
-
-.footer__copyright-link {
-  display: inline-block;
-  height: 34px;
-  width: 27px;
-
-  &:hover {
-    .footer__logo-academy {
-      fill: @blue;
+    &::after {
+      background-color: @blue;
     }
   }
 
   &:active {
-    .footer__logo-academy {
-      fill: rgba(179, 179, 179, 1);
+    color: rgba(179, 179, 179, 1);
+
+    &::after {
+      background-color: rgba(179, 179, 179, 1);
     }
   }
 }

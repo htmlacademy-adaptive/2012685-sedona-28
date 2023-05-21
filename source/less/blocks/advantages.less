@@ -6,7 +6,7 @@
 .advantages__header {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 32px 18px;
+  padding: 32px 28px;
 
   @media (min-width: @tablet-width) {
     padding: 47px 124px 55px;
@@ -17,9 +17,11 @@
   .title;
   text-align: center;
   margin: 0;
+
   &--color {
     color: @white;
   }
+
   @media (min-width: @tablet-width) {
     .title-bigger(bigger; 18px);
   }
@@ -30,8 +32,53 @@
   display: block;
   margin: 0;
   margin-top: 15px;
-  &--color {
-    color: @white;
+
+  &--decor {
+    &::before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      top: -4px;
+      right: 5px;
+      width: 8px;
+      height: 1px;
+      background-color: @black;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      display: inline-block;
+      top: -4px;
+      left: 5px;
+      width: 8px;
+      height: 1px;
+      background-color: @black;
+    }
+  }
+
+  &--decor-color {
+    &::before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      top: -4px;
+      right: 5px;
+      width: 8px;
+      height: 1px;
+      background-color: @white;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      display: inline-block;
+      top: -4px;
+      left: 5px;
+      width: 8px;
+      height: 1px;
+      background-color: @white;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -69,7 +116,7 @@
 }
 
 .advantages__container {
-  padding: 33px 18px 40px;
+  padding: 33px 37px 40px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -85,6 +132,7 @@
   }
 
   &--blue {
+    color: @white;
     background-color: @blue;
   }
 
